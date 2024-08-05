@@ -1,0 +1,120 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* --- */
+
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  padding: 1rem;
+  background: hsla(213, 72%, 65%, 1);
+
+  background: linear-gradient(
+    270deg,
+    hsla(213, 72%, 65%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    270deg,
+    hsla(213, 72%, 65%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    270deg,
+    hsla(213, 72%, 65%, 1) 0%,
+    hsla(0, 0%, 100%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#65A0E6", endColorstr="#FFFFFF", GradientType=1 );
+}
+
+footer {
+  background: hsla(213, 72%, 65%, 0.5);
+  padding: 1rem;
+}
+
+#summary {
+  text-align: center;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.projectCard {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  #profile-image {
+    padding: 1rem;
+  }
+  header > h1 {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+  }
+  main > h2 {
+    text-align: center;
+  }
+}
