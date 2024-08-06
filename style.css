@@ -143,7 +143,7 @@ footer {
     padding: 1rem;
   }
 
-  header > h1 {
+  header h1 {
     position: absolute;
     top: 5%;
     left: 10%;
