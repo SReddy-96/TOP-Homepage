@@ -76,10 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
   Projects.forEach((project) => {
     // create elements
     let projectCard = document.createElement("div");
-    let projectTitle = document.createElement("h4");
+    let projectTitle = document.createElement("h3");
     let projectImage = document.createElement("img");
     let projectDescription = document.createElement("p");
     let svgWrapper = document.createElement("a");
+    let github = document.createElement("span");
     let projectGithub = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "svg"
@@ -95,22 +96,28 @@ document.addEventListener("DOMContentLoaded", function () {
     ); //Set path's data
     projectGithub.appendChild(newElement);
     projectGithub.classList.add("projectGithub");
-    svgWrapper.appendChild(projectGithub);
+    github.textContent = "Github";
+    svgWrapper.append(projectGithub, github);
 
-    projectTitle = project.title;
+    projectTitle.textContent = project.title;
     projectImage.src = project.image_src;
     projectImage.alt = project.image_alt;
-    projectDescription = project.description;
+    projectDescription.textContent = project.description;
     svgWrapper.href = project.github;
     svgWrapper.target = "_blank";
 
     projectCard.append(
-      projectImage,
       projectTitle,
+      projectImage,
       projectDescription,
       svgWrapper
     );
+
     projectCard.classList.add("projectCard");
+    setTimeout(() => {
+      projectCard.style.opacity = 1;
+    }),
+      1000;
 
     container.append(projectCard);
   });

@@ -11,9 +11,10 @@
 
 
 ## Problems Encountered
-
+- Using `transition` to fade in the projects
 
 ## New Skills Acquired
+- Alongside `transition` using `setTimeout` to add the opactiy to fade-in when the projects are added to the DOM.
 
 
 ## Technologies Used
