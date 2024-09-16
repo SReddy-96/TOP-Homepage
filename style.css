@@ -214,10 +214,6 @@ footer {
   }
 }
 
-/* tablet */
-@media (600px < width < 1100px) {
-}
-
 /* desktop */
 
 @media (min-width: 1100px) {
